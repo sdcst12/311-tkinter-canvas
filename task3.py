@@ -13,7 +13,16 @@ c.pack()
 
 
 rec = c.create_rectangle(50,50,80,80,fill="#aa0000")
-cir = c.create_oval(100,120,150,170,fill="green")
+
+
+def keyPress(e):
+    print(e)
+    print(e.keycode, e.keysym, e.x, e.y)
+    
+w.bind("<Left>",keyPress)
+w.bind("<Right>",keyPress)
+w.bind("<Up>",keyPress)
+w.bind("<Down>",keyPress)
 
 
 w.mainloop()
